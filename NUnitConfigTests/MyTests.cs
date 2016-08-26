@@ -37,6 +37,18 @@ namespace NUnitConfigTests
             Assert.AreEqual("Server=(local);user=John", connString);
         }
         
+        [Test]
+        public void Test_should_access_config3()
+        {
+            // appSettings
+            var someValue = ConfigurationManager.AppSettings["SomeValue"];
+            Assert.AreEqual("Hello, config!", someValue);
+
+            // connectionStrings
+            var connString = ConfigurationManager.ConnectionStrings["MyConnectionString"].ConnectionString;
+            Assert.AreEqual("Server=(local);user=John", connString);
+        }
+        
 		//[Test]
 		public void TestConnect28()
 		{
