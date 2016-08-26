@@ -4,6 +4,7 @@ configuration: Release
 
 before_build:
   - nuget restore
+  set path=c:\Tools\NUnit\bin;%path%
 
 #before_test:
   #- ps: start-sleep -s 180
