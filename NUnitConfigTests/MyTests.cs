@@ -26,7 +26,7 @@ namespace NUnitConfigTests
         }
 	
 	[Test]
-        public void Test_should_access_config( string val )
+        public void Test_should_access_config(string val = "bla")
         {
             // appSettings
             var someValue = ConfigurationManager.AppSettings[val];
