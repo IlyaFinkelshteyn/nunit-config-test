@@ -26,10 +26,10 @@ namespace NUnitConfigTests
         }
 	
 	[Test]
-        public void Test_should_access_config()
+        public void Test_should_access_config( string val )
         {
             // appSettings
-            var someValue = ConfigurationManager.AppSettings["SomeValue"];
+            var someValue = ConfigurationManager.AppSettings[val];
             Assert.AreEqual("Hello, config!", someValue);
 
             // connectionStrings
